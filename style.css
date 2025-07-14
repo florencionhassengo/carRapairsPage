@@ -12,15 +12,28 @@ body{
     max-width: 100%;
     width: 1000px;
     margin: 0 auto;
+    padding: 0 1rem;
+    max-height: 100%;
 }
 
 header{
     background-image: url('car-jpg.jpg');
     color: white;
     display: flex;
-    min-height:100vh;
     background-position: center center;
     flex-direction: column;
+    min-height:100vh;
+}
+
+.content{
+    margin: auto;
+    font-size: 2rem;
+    max-width: 100%;
+}
+.content h1{
+    color: blue;
+    margin-bottom: 0;
+    
 }
 nav{
     display: flex;
@@ -35,20 +48,69 @@ nav ul{
     padding: 0;
     list-style: none;
 }
-nav li {
-
-}
 
 nav li a{
     color: white;
     padding: 1rem;
     text-decoration: none;
-
 }
+.fa-car{
+    font-size: 1.5rem;
+}
+
+
 .selected{
     font-weight: bold;
 }
 
 .highlight{
     background-color: blue;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+footer strong{
+    color: blue
+}
+
+@media screen and (max-width: 700px){
+    .content{
+        margin: 2rem auto 0;
+    }
+    nav ul{
+        font-size: 1.4rem;
+        flex-direction: column;
+    }
+
+    nav li {
+        flex-direction: column;
+    }
+    
+    nav li:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+    nav .highlight{
+        display: none;
+    }
+    footer ul{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
